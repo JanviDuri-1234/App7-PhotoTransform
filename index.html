@@ -102,9 +102,22 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-          
-          
-          
+          // this code references the second canvas element 
+         var canvas2 = document.getElementById('canvas2'); 
+         // this code gets the image data from the first canvas (original image)
+         const originalImageData = context.getImageData(0,0,600,500); 
+         //this makes a copy of the original image data, so there is no need to rewrite the original image canvas 
+         const processedImageData = new ImageData(new Uint8ClampedArray(originalImageData.data), originalImageData.width, originalImageData.height);  
+         // this gives us access to the pixel data array of the copied image 
+         const data = processedImageData.data; 
+         //this loops through every pixel in the image 
+         for (let i = 0; i < data.length; i +=4) { 
+          data[i] = 0;// set red channel to 0 
+          data[i + 1] = 0; //set green channel to 0 
+          // Blue channel (data [i to 2]) is kept as is to preserve blue colors 
+
+         } 
+         //After processing the image data to the second canvas
         } // end of img.onload
         
         img.src = reader.result;
