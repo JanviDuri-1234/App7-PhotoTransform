@@ -163,8 +163,14 @@
     <!--Second canvas to display the blue-filtered image --> 
      <canvas id="canvas2" width=600 height=500 style="border:1px solid #d3d3d3;" ></canvas>
      <script> //This script starts the second canvas and allows for a placeholder text 
-      var canvas2 = document.getElem
-    </div><!-- /content -->
+      var canvas2 = document.getElementById('canvas2'); // the gets the reference to the second canvas
+      var context2 = canvas2.getContext("2d"); // this code gets the 2D drawing context 
+      context2.font = '20pt Calibri'; //This sets the text font to the same as canvas 1's.
+      context2.fillStyle = "black"; //this sets the text color to be the same as canvas 1's. 
+      context2.fillText("Filtered image's location", 10,20); //this plots the placeholder text. 
+     </script> 
+     
+    </div> <!-- /content -->
     <div data-role="footer" data-position="fixed">
       <p>DIY Diagnostics</p>
     </div><!-- /footer -->
