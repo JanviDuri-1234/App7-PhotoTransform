@@ -118,6 +118,8 @@
 
          } 
          //After processing the image data on the second canvas
+        context2.putImageData(processedImageData, 0, 0); // This makes sure the image is inserted with only the blue pixels
+
          
         } // end of img.onload
         
