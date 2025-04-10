@@ -153,13 +153,17 @@
      <!-- This is the first canvas to display the original image --> 
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var canvas = document.getElementById('myCanvas');
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Original image will go here", 10, 20);
+        var canvas = document.getElementById('myCanvas'); // this references to the first canvas
+        var context = canvas.getContext("2d"); // gets 2D drawing context
+        context.font = '20pt Calibri'; //this code sets the text font 
+        context.fillStyle = "black"; // this code sets the text color 
+        context.fillText("Original image will go here", 10, 20); //this code draws the placeholder text 
       </script>
 
+    <!--Second canvas to display the blue-filtered image --> 
+     <canvas id="canvas2" width=600 height=500 style="border:1px solid #d3d3d3;" ></canvas>
+     <script> //This script starts the second canvas and allows for a placeholder text 
+      var canvas2 = document.getElem
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
       <p>DIY Diagnostics</p>
